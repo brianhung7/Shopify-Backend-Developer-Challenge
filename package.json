@@ -1,0 +1,23 @@
+{
+  "name": "shopify-backend-developer-challenge",
+  "version": "1.0.0",
+  "description": "Submission for Shopify's Backend Developer Challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianhung7/Shopify-Backend-Developer-Challenge.git"
+  },
+  "author": "Brian Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianhung7/Shopify-Backend-Developer-Challenge/issues"
+  },
+  "homepage": "https://github.com/brianhung7/Shopify-Backend-Developer-Challenge#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
