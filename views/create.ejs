@@ -7,6 +7,29 @@
     <title>Create Item</title>
 </head>
 <body>
-    Create view route
+    <h1>Create view route</h1>
+    <form action="/create" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="title">Title</label><br />
+            <input maxlength="30" type="text" class="input" placeholder="Painting" name="title" id="title" required>
+        </div>
+        <div>
+            <label for="description">Description</label><br />
+            <input maxlength="300" type="text" class="input" placeholder="Description" name="description" id="description" required>
+        </div>
+        <div>
+            <label for="price">Price</label><br />
+            <input maxlength="300" type="number" class="input" placeholder="$199.99" name="price" id="price" step="0.01" min=0 required>
+        </div>
+
+        <div>
+            <label for="image">Image URL</label><br />
+            <input maxlength="300" type="text" class="input" placeholder="Image" name="image" id="image" required>
+        </div>
+
+        <div>
+            <button>Submit New Item</button>
+        </div>
+    </form>
 </body>
 </html>
