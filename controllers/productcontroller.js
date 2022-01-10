@@ -76,9 +76,7 @@ router.get("/create", (req,res) => {
 
 router.post("/create", async(req, res, next) => {
     try {
-        // console.log(req.body)
         const newProduct = await Product.create(req.body);
-        // console.log(newProduct)
         return res.redirect(`/`);
     } catch (error) {
         const context = {
