@@ -2,6 +2,9 @@ const express = require("express");
 const app = express(); 
 const methodOverride = require("method-override")
 
+const multer = require('multer')
+const upload = multer({dest: 'uploads/'})
+
 //Controllers
 const productCtrl = require("./controllers/productcontroller.js");
 
@@ -12,6 +15,8 @@ app.use(bodyParser.json());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+
+app.use(upload.single('image'))
 
 //Routes
 app.use("/", productCtrl)

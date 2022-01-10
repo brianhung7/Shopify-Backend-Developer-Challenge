@@ -9,7 +9,7 @@
 <body>
     <%-include('./_nav') %>
     <h1>Create a New Item</h1>
-    <form action="/create" method="POST" enctype="application/x-www-form-urlencoded">
+    <form action="/create" method="POST" enctype="multipart/form-data">
         <div>
             <label for="title">Title</label><br />
             <input maxlength="30" type="text" class="input" placeholder="Painting" name="title" id="title" required>
@@ -25,7 +25,7 @@
 
         <div>
             <label for="image">Image URL</label><br />
-            <input maxlength="300" type="text" class="input" placeholder="Image" name="image" id="image" required>
+            <input maxlength="300" type="file" class="input" placeholder="Image" name="image" id="image" required>
         </div>
 
         <div>

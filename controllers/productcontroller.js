@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Product = require("../models/Product");
+const handleUploadFile = require('../utils/handleUpload')
+
 
 //index view route
 router.get("/", async(req,res,next) => {
@@ -18,7 +20,7 @@ router.get("/", async(req,res,next) => {
 })
 
 
-//single product GET route
+//single product GET route (presentational)
 router.get("/product/:id", async(req, res, next) => {
     try {
         const product = await Product.findById(req.params.id)
@@ -33,7 +35,7 @@ router.get("/product/:id", async(req, res, next) => {
     }
 })
 
-//product edit route
+//product edit route (presentational)
 router.get("/product/:id/edit", async(req, res, next) => {
     try {
         const product = await Product.findById(req.params.id)
@@ -48,7 +50,7 @@ router.get("/product/:id/edit", async(req, res, next) => {
     }
 })
 
-//product PUT (edit) route
+//product PUT (edit) route (functional)
 router.put("/product/:id", (req,res,next) => {
     Product.findByIdAndUpdate(
         req.params.id, 
@@ -69,12 +71,13 @@ router.put("/product/:id", (req,res,next) => {
     )
 })
 
-//create product get route
+//create product get route (presentational)
 router.get("/create", (req,res) => {
     return res.render("create")
 })
 
-router.post("/create", async(req, res, next) => {
+//create product post route (functional)
+router.post("/create", handleUploadFile, async(req, res, next) => {
     try {
         const newProduct = await Product.create(req.body);
         return res.redirect(`/`);
