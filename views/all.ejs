@@ -11,12 +11,14 @@
 <body>
     <div>
         <% for(let i = 0; i < allProducts.length; i++) { %>
-            <div class="card">
-                <%= allProducts[i].title %>
-                <img src="<%= allProducts[i].image%>" width="150px">
-                <%= allProducts[i].description %>
-                $<%= allProducts[i].price %>
-            </div>
+            <a href="/product/<%= allProducts[i].id %>">
+                <div class="card">
+                    <%= allProducts[i].title %>
+                    <img src="<%= allProducts[i].image%>" width="150px">
+                    <%= allProducts[i].description %>
+                    $<%= allProducts[i].price %>
+                </div>
+            </a>
         <% } %> 
     </div> 
 </body>

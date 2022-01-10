@@ -10,14 +10,15 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
+
 //Routes
 app.use("/", productCtrl)
 
 
 app.set("view engine", "ejs");
 
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
 
 app.get('/*', function(request,response){
     response.send("Wrong way! 404ed!"); 
