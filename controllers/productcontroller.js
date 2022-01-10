@@ -6,8 +6,10 @@ const Product = require("../models/Product");
 router.get("/", async(req,res,next) => {
     try{
         const allProducts = await Product.find()
-        console.log(allProducts)
-        res.send(allProducts)
+        context = {
+            allProducts: allProducts
+        }
+        res.render('all', context)
     } catch (error) {
         console.log(error);
         req.error = error;
@@ -22,9 +24,9 @@ router.get("/create", (req,res) => {
 
 router.post("/create", async(req, res, next) => {
     try {
-        console.log(req.body)
+        // console.log(req.body)
         const newProduct = await Product.create(req.body);
-        console.log(newProduct)
+        // console.log(newProduct)
         return res.redirect(`/`);
     } catch (error) {
         const context = {
