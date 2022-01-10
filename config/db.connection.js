@@ -13,6 +13,8 @@ const connectionStr = process.env.MONGODB_URI || 'mongodb://localhost:27017/shop
 //     useFindAndModify: false,
 // });
 
+mongoose.connect(connectionStr);
+
 mongoose.connection.on('connected', () => {
     console.log('\x1b[36m%s\x1b[0m', `[${new Date().toLocaleTimeString()}] - MongoDB connected ... 🙌 🙌 🙌`)
 });

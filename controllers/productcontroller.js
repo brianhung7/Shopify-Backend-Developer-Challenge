@@ -5,7 +5,9 @@ const Product = require("../models/Product");
 //index view route
 router.get("/", async(req,res,next) => {
     try{
-        res.send("Product route")
+        const allProducts = await Product.find()
+        console.log(allProducts)
+        res.send(allProducts)
     } catch (error) {
         console.log(error);
         req.error = error;
@@ -20,12 +22,15 @@ router.get("/create", (req,res) => {
 
 router.post("/create", async(req, res, next) => {
     try {
+        console.log(req.body)
         const newProduct = await Product.create(req.body);
+        console.log(newProduct)
         return res.redirect(`/`);
     } catch (error) {
         const context = {
             error,
         };
+        console.log(context)
         return res.render("create", context);
     }
 })
