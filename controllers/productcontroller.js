@@ -89,4 +89,15 @@ router.post("/create", async(req, res, next) => {
     }
 })
 
+router.delete("/product/:id", async(req, res, next) => {
+    try{
+        console.log(req.params)
+        await Product.findByIdAndDelete(req.params.id)
+        return res.redirect('/')
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
 module.exports = router;
