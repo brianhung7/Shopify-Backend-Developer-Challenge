@@ -9,14 +9,20 @@
 </head>
 
 <body>
+    <%-include('./_nav') %>
     <div>
+        <h1>Viewing all Inventory Items</h1>
+    </div>
+    <div class='card__container'>
         <% for(let i = 0; i < allProducts.length; i++) { %>
             <a href="/product/<%= allProducts[i].id %>">
                 <div class="card">
                     <%= allProducts[i].title %>
-                    <img src="<%= allProducts[i].image%>" width="150px">
+                    <img src="<%= allProducts[i].image%>" width="200px">
                     <%= allProducts[i].description %>
-                    $<%= allProducts[i].price %>
+                    <div>
+                        $<%= allProducts[i].price %>
+                    </div>
                 </div>
             </a>
         <% } %> 
@@ -28,9 +34,13 @@
 <style type="text/css">
     body {
         background-color: aqua;
+
+    }
+    .card__container{
         display: flex;
     }
     .card {
+        width: 200px;
         padding: 10px 10px ;
         margin: 10px 10px;
         border-radius: 5px;

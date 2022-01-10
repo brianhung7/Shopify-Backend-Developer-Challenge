@@ -7,11 +7,13 @@
     <title>Single Product Page</title>
 </head>
 <body>
+    <%-include('./_nav') %>
+    <h1>Viewing Individual Product Page</h1>
     <div>
-        <%= product.title %>
-        <%= product.description %>
-        <%= product.image %>
-        <%= product.price %> 
+        <div><%= product.title %> </div>
+        <div><%= product.description %> </div>
+        <img src="<%= product.image %>" alt="" srcset="" width="150px">
+        $<%= product.price %> 
     </div>
     <div>
         <a href="/product/<%= product.id %>/edit">Edit</a>
