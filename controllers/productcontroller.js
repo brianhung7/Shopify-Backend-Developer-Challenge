@@ -90,6 +90,7 @@ router.post("/create", handleUploadFile, async(req, res, next) => {
     }
 })
 
+//delete product route (functional)
 router.delete("/product/:id", async(req, res, next) => {
     try{
         console.log(req.params)

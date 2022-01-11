@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const connectionStr = process.env.MONGODB_URI || 'mongodb://localhost:27017/shopifybackend';
 
-// const connectionStr = 'mongodb://localhost:27017/shopifybackend';
 
 
 // mongoose.connect(connectionStr, {
