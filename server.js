@@ -29,6 +29,6 @@ app.get('/*', function(request,response){
     response.send("Wrong way! 404ed!"); 
 });
 
-app.listen(4000, function(){
+app.listen(process.env.PORT || 4000, function(){
     console.log("I am live on port 4000");
 });
