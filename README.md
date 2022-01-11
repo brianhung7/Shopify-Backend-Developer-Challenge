@@ -6,12 +6,7 @@ Brian Pham's Submission for Shopify's Backend Developer Challenge
 1. ```npm install```  
 2. You will also need to create a ```.env``` file on the top level directory, on the same level as ```server.js```
 3. Inside the ```.env``` file please copy and paste the following demo keys and save
- ```AWS_BUCKET_NAME = shopify-backend-dev
-AWS_BUCKET_REGION = us-west-1
-AWS_ACCESS_KEY_ID = AKIA2QKO7NZ63BFXKBOQ
-AWS_SECRET_ACCESS_KEY = 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
-MONGODB_URI=mongodb+srv://brian:abc321@sei.hfld5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-```
+
 4. ```npm start``` and go to ```http://localhost:4000/```
 
 
