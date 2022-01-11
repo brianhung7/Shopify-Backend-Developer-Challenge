@@ -4,8 +4,6 @@ Brian Pham's Submission for Shopify's Backend Developer Challenge
 ## Getting Started
 
 1. ```npm install```  
-2. You will also need to create a ```.env``` file on the top level directory, on the same level as ```server.js```
-3. Inside the ```.env``` file please copy and paste the following demo keys and save
 
 4. ```npm start``` and go to ```http://localhost:4000/```
 
