@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 app.use(upload.single('image'))
+app.use('/uploads', express.static('uploads'));
 
 //Routes
 app.use("/", productCtrl)
