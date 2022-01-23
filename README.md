@@ -20,3 +20,7 @@ Thankfully styling/css was specifically mentioned as not being considered as a f
 
 ## Technologies 💻
 Javascript, Node, Express, MongoDB, Mongoose, Atlas, Heroku, AWS S3 Buckets
+
+## Future Features
+* Seriously needs styling 
+* Adding React frontend would convert this from MEN stack to MERN stack
